@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Open Multiple Question Links
 // @namespace    http://roub.net/
-// @version      0.3
+// @version      0.4
 // @description  open multiple selected links, skipping non-questions
 // @author       Paul Roub
 // @include      *://chat.stackoverflow.com/rooms/41570/so-close-vote-reviewers
@@ -52,7 +52,7 @@ function openLinks() {
         d.appendChild(r.cloneContents());
 
         var as = d.getElementsByTagName('a');
-        qs = Array.prototype.slice.call(as).filter( function(el) { return el.href.match(/stackoverflow\.com\/q\/\d/); } );
+        qs = Array.prototype.slice.call(as).filter( function(el) { return el.href.match(/stackoverflow\.com\/q(uestions)?\/\d/); } );
     }
 
     if (qs.length)
