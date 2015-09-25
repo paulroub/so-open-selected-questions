@@ -9,6 +9,9 @@
 // @run-at       context-menu
 // ==/UserScript==
 
+// tested on:
+//   Chrome 45.0.2454.101 w/TamperMonkey 3.11
+//   Firefox 41.0 w/GreaseMonkey 3.4.1
 
 var isGm = false;
 
