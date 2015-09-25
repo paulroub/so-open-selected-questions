@@ -2,7 +2,7 @@
 // @name         Open Multiple Question Links
 // @namespace    http://roub.net/
 // @version      0.2
-// @description  open multiple selected links, skipping non-questions
+// @description  Open multiple selected links, skipping non-questions. Currently Tampermonkey-only.
 // @author       Paul Roub
 // @include      *://chat.stackoverflow.com/rooms/41570/so-close-vote-reviewers
 // @grant        GM_openInTab
