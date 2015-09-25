@@ -4,7 +4,7 @@
 // @version      0.2
 // @description  open multiple selected links, skipping non-questions
 // @author       Paul Roub
-// @match        http*://chat.stackoverflow.com/rooms/41570/so-close-vote-reviewers
+// @include      *://chat.stackoverflow.com/rooms/41570/so-close-vote-reviewers
 // @grant        GM_openInTab
 // @run-at       context-menu
 // ==/UserScript==
