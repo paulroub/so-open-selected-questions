@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Open Multiple Question Links
 // @namespace    http://roub.net/
-// @version      0.5
+// @version      0.6
 // @description  open multiple selected links, skipping non-questions
 // @author       Paul Roub
 // @include      *://chat.stackoverflow.com/rooms/41570/so-close-vote-reviewers
