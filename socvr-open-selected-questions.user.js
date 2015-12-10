@@ -5,6 +5,7 @@
 // @description  open multiple selected links, skipping non-questions
 // @author       Paul Roub
 // @include      *://chat.stackoverflow.com/rooms/41570/so-close-vote-reviewers
+// @include      *://chat.stackoverflow.com/search*
 // @grant        GM_openInTab
 // @run-at       context-menu
 // ==/UserScript==
