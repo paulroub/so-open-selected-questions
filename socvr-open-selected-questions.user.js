@@ -1,9 +1,10 @@
 // ==UserScript==
 // @name         Open Multiple Question Links
 // @namespace    http://roub.net/
-// @version      0.6
-// @description  open multiple selected links, skipping non-questions
+// @version      0.7
+// @description  open multiple selected unique question links, skipping non-questions
 // @author       Paul Roub
+// @contributor  Mogsdad
 // @include      *://chat.stackoverflow.com/rooms/41570/so-close-vote-reviewers
 // @include      *://chat.stackoverflow.com/search*
 // @grant        GM_openInTab
@@ -56,7 +57,18 @@ function openLinks() {
         d.appendChild(r.cloneContents());
 
         var as = d.getElementsByTagName('a');
-        qs = Array.prototype.slice.call(as).filter( function(el) { return el.href.match(/stackoverflow\.com\/[aq](uestions)?\/\d/); } );
+        var unique = [];
+        qs = Array.prototype.slice.call(as).filter( function(el) {
+            var postRe = /stackoverflow\.com\/[aq](uestions)?\/\d/;
+            if (el.href.match(postRe)) {
+                var id = el.href.match(/\d+/)[0];
+                if (unique.indexOf(id) == -1) {
+                    unique.push(id);
+                    return true;
+                }
+            }
+            return false;
+        } );
     }
 
     if (qs.length)
