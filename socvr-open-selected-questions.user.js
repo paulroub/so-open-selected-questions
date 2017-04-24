@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Open Multiple Question Links
 // @namespace    http://roub.net/
-// @version      0.7
+// @version      0.8
 // @description  open multiple selected unique question links, skipping non-questions
 // @author       Paul Roub
 // @contributor  Mogsdad
@@ -60,7 +60,7 @@ function openLinks() {
         var unique = [];
         qs = Array.prototype.slice.call(as).filter( function(el) {
             var postRe = /stackoverflow\.com\/[aq](uestions)?\/\d/;
-            if (el.href.match(postRe)) {
+            if (el.href.match(postRe) && isVisible(el)) {
                 var id = el.href.match(/\d+/)[0];
                 if (unique.indexOf(id) == -1) {
                     unique.push(id);
@@ -103,4 +103,8 @@ function initMenu(aEvent) {
   {
     body.removeAttribute("contextmenu");
   }
+}
+
+function isVisible(el) {
+    return (el.offsetParent !== null)
 }
