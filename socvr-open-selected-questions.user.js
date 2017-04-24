@@ -106,5 +106,6 @@ function initMenu(aEvent) {
 }
 
 function isVisible(el) {
-    return (el && el.offsetHeight);
+ //   return (el && el.offsetHeight);
+    return true;   // derp. re-do this with actual nodes in the range, not a cloned div
 }
