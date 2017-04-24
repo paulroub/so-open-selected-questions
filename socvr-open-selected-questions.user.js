@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Open Multiple Question Links
 // @namespace    http://roub.net/
-// @version      0.8
+// @version      0.9
 // @description  open multiple selected unique question links, skipping non-questions
 // @author       Paul Roub
 // @contributor  Mogsdad
@@ -106,5 +106,5 @@ function initMenu(aEvent) {
 }
 
 function isVisible(el) {
-    return (el.offsetParent !== null)
+    return (el && el.offsetHeight);
 }
